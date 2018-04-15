@@ -13,9 +13,9 @@ La construcción, instalación, configuración y detalles de la ejecución de ca
 
 Es necesario disponer de una distribución de Linux para comenzar la implementación. En nuestro caso instalamos Debian 9 server básico en una máquina física o virtual. 
 
-2. Docker
+2. [Docker](docker/README.md)
 
-3. RPKI Validator
+3. [RPKI Validator](rpki-validator/README.md)  
 
-4. BIRD Route Server
+4. [BIRD](bird/README.md) 
 
