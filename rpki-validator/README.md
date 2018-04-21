@@ -23,5 +23,12 @@ La opción *--restart unless-stopped* asegura que al reinicio del demonio docker
 5. Para conectarnos al contenedor rpki-validator ejecutamos: 
 ```sh
 $ sudo docker exec -it rpki-validator /bin/bash
+root@rpki:/rpki-validator-app-2.24#
 ```
-6. 
+6. Verificamos que el validador este escuchsndo en los puertos 8080 y 8282.
+```sh
+/rpki-validator-app-2.24# lsof -nPi | grep LISTEN
+java       63 root   87u  IPv6     62992      0t0  TCP *:8282 (LISTEN)
+java       63 root   93u  IPv6     62999      0t0  TCP *:8080 (LISTEN)
+```
+7. Verificamos el estado y funcionamiento del rpki-validador ingresando a la pagina web http://ip_del_route_server:8080.
