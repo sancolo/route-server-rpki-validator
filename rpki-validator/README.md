@@ -18,7 +18,7 @@ $ docker images
 ```sh
 $ sudo docker run --name rpki-validator -dit --restart unless-stopped -h rpki -p 8080:8080 -p 8282:8282 rpki-validator
 ```
-La opción --restart unless-stopped asegura que al reinicio del demonio docker se ejecute el contenedor rpki-validator.
+La opción *--restart unless-stopped* asegura que al reinicio del demonio docker se ejecute el contenedor rpki-validator.
 
 5. Para conectarnos al contenedor rpki-validator ejecutamos: 
 ```sh
