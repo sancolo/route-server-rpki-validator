@@ -11,7 +11,7 @@ La construcción, instalación, configuración y detalles de la ejecución de ca
 
 1. Debian 
 
-Es necesario disponer de una distribución de Linux para comenzar la implementación. En nuestro caso instalamos Debian 9 server básico en una máquina física o virtual. 
+> Es necesario disponer de una distribución de Linux para comenzar la implementación. En nuestro caso instalamos Debian 9 server básico en una máquina física o virtual. 
 
 2. [Docker](docker/README.md)
 
