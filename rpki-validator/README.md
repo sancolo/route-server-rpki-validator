@@ -27,7 +27,7 @@ root@rpki:/rpki-validator-app-2.24#
 ```
 6. Verificamos que el validador este escuchsndo en los puertos 8080 y 8282.
 ```sh
-/rpki-validator-app-2.24# lsof -nPi | grep LISTEN
+root@rpki:/rpki-validator-app-2.24# lsof -nPi | grep LISTEN
 java       63 root   87u  IPv6     62992      0t0  TCP *:8282 (LISTEN)
 java       63 root   93u  IPv6     62999      0t0  TCP *:8080 (LISTEN)
 ```
