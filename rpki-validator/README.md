@@ -12,7 +12,7 @@ $ sudo docker build -t rpki-validator .
 Verificamos la imagen creada ejecutando:
 ```sh
 $ docker images
-
+rpki-validator              latest              478ef5603551        2 months ago        647MB
 ```
 3. Ejecutamos el contenedor teniendo en cuenta que los puertos 8080 y 8282 son mapeados en el host para su acceso externo. En el puerto 8080 se ejecuta la interfaz web del validador y en el puerto 8282 se accede al repositorio de ROAs. 
 ```sh
