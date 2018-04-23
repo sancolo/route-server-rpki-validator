@@ -20,7 +20,7 @@ bird-2.0.1                  latest              6c4040cd8d28        11 days ago 
 ```sh
 $ mkdir $HOME/rsbird
 $ cd $HOME/rsbird
-$ wget -A \*.conf https://github.com/sancolo/route-server-rpki-validator/
+$ wget -A *.conf https://github.com/sancolo/route-server-rpki-validator/bird/
 $ ln -s rsbird.conf bird.conf
 ```
 4. Ejecutamos el contenedor a partir de la imagen creada y montando el directorio local donde se encuentra el archivo de configuracion bird.conf para BIRD

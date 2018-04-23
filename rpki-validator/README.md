@@ -31,4 +31,4 @@ root@rpki:/rpki-validator-app-2.24# lsof -nPi | grep LISTEN
 java       63 root   87u  IPv6     62992      0t0  TCP *:8282 (LISTEN)
 java       63 root   93u  IPv6     62999      0t0  TCP *:8080 (LISTEN)
 ```
-7. Verificamos el estado y funcionamiento del rpki-validador ingresando a la pagina web http://ip_del_route_server:8080.
+7. Verificamos el estado y funcionamiento del rpki-validador ingresando a la pagina web https://ip_route_server:8080.
