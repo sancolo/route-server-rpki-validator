@@ -16,11 +16,15 @@ $ docker images
 REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
 bird-2.0.1                  latest              6c4040cd8d28        11 days ago         392MB
 ```
-3. Creamos el directorio rsbird y copiamos los archivos [rsbird.conf](rsbird.conf), [filters.conf](filters.conf), [memebers.conf](members.conf) y [rpki.conf](rpki.conf) en el directorio rsbird
+3. Clonamos el repositorio github en el directorio $HOME del host docker, y se genera el directorio route-server-rpki-validatori que contiene todo el repositorio.
+```sh
+$ git clone https://github.com/sancolo/route-server-rpki-validator.git
+```
+4. Creamos el directorio rsbird y copiamos dentro los archivos [rsbird.conf](rsbird.conf), [filters.conf](filters.conf), [memebers.conf](members.conf) y [rpki.conf](rpki.conf). 
 ```sh
 $ mkdir $HOME/rsbird
 $ cd $HOME/rsbird
-$ wget -A *.conf https://github.com/sancolo/route-server-rpki-validator/bird/
+$ cp $HOME/route-server-rpki-validator/bird/*.conf .
 $ ln -s rsbird.conf bird.conf
 ```
 4. Ejecutamos el contenedor a partir de la imagen creada y montando el directorio local donde se encuentra el archivo de configuracion bird.conf para BIRD
