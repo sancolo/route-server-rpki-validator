@@ -65,6 +65,5 @@ bird>
 
 Los archivos *.conf* de BIRD corresponden a un escenario de prueba de un Route Server y dos miembros del IXP como se muestra a en la imagen.
 
- 
-
+![](IXP_RS_2M.png)
  
