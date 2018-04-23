@@ -23,8 +23,8 @@ WORKDIR /root
 RUN curl -O -L https://github.com/BIRD/bird/archive/v2.0.1.zip
 RUN unzip v2.0.1.zip
 
-# Este directorio debe ser montado como un volumen local con la opcion de comando de docker `-v $HOME/rbird1:/etc/bird:rw'.
-# El archivo en el host $HOME/rbird1/bird.conf es usado como el archivo de configuracion para BIRD.
+# Este directorio debe ser montado como un volumen local con la opcion de comando de docker `-v $HOME/rsbird:/etc/bird:rw'.
+# El archivo en el host $HOME/rsbird/bird.conf es usado como el archivo de configuracion para BIRD.
 RUN mkdir /etc/bird
 
 RUN cd bird-2.0.1 && \
