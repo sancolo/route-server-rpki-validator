@@ -2,11 +2,11 @@
 
 Como validador de ROAs utilizamos el RIPE NCC RPKI Validator version 2.24 
 
-1. Creamos una imagen para docker a partir del archivo Dockerfile definido para el rpki-validator
+1. Creamos una imagen para docker a partir del archivo [Dockerfile](Dockerfile) definido para el rpki-validator
 ```sh
 $ mkdir mydockerbuild_rpki-validator
 $ cd mydockerbuild_rpki-validator
-$ wget 
+$ wget https://github.com/sancolo/route-server-rpki-validator/blob/master/rpki-validator/Dockerfile 
 $ sudo docker build -t rpki-validator .
 ```
 Verificamos la imagen creada ejecutando:
