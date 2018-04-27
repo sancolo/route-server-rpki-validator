@@ -1,16 +1,16 @@
 # BIRD Route Server
 
 ### Ejecución
-Para ejecutar la version 2.0.1 de bird dentro de un contenedor de docker seguimos los siguientes pasos
+Para ejecutar la version 2.0.1 de bird dentro de un contenedor de docker seguimos los siguientes pasos:
 
-1. Creamos una imagen de docker a partir del archivo [Dockerfile](Dockerfile)
+1. Creamos una imagen de docker a partir del archivo [Dockerfile](Dockerfile).
 ```sh
 $ mkdir mydockerbuild_bird
 $ cd mydockerbuild_bird
 $ wget https://github.com/sancolo/rpki-lab/bird/Dockerfile
 $ sudo docker build -t bird-2.0.1 .
 ```
-2. Verificamos que la imagen esta creada en el host
+2. Verificamos que la imagen esta creada en el host.
 ```sh
 $ docker images
 REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
@@ -27,19 +27,19 @@ $ cd $HOME/rsbird
 $ cp $HOME/route-server-rpki-validator/bird/*.conf .
 $ ln -s rsbird.conf bird.conf
 ```
-4. Ejecutamos el contenedor a partir de la imagen creada y montando el directorio local donde se encuentra el archivo de configuracion bird.conf para BIRD
+4. Ejecutamos el contenedor a partir de la imagen creada y montando el directorio local donde se encuentra el archivo de configuracion bird.conf para BIRD.
 ```sh
 $ sudo docker run -d --privileged --name rsbird -v `$HOME/rsbird:/etc/bird:rw -h rsbird -p 179:179 bird-2.0.1
 ```
 Podemos agregar la opción --restart unless-stopped para que al reinicio del demonio docker se ejecute el contenedor rsbird.
 
-5. Verificamos que el contenedor se esta ejecutando
+5. Verificamos que el contenedor se esta ejecutando.
 ```sh
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS        PORTS        NAMES
 1611c3c34128        bird-2.0.1          "/bin/sh -c 'bird -c…"   6 days ago          Up 6 days     179/tcp      rsbird
 ```
-6. Para entrar al contenedor ejecutamos
+6. Para entrar al contenedor ejecutamos:
 ```sh
 $ sudo docker exec -it rsbird /bin/bash
 root@1611c3c34128:~# birdc
