@@ -16,3 +16,4 @@ WORKDIR rpki-validator-app-2.24
 EXPOSE 8080 8282
 
 ENTRYPOINT ["/rpki-validator-app-2.24/rpki-validator.sh", "run"]
+
